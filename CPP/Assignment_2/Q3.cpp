@@ -1,4 +1,9 @@
-
+/*
+ * Q3.cpp
+ *
+ *  Created on: 01-Sept-2026
+ *      Author: Ritesh
+ */
 
 #include <iostream>
 using namespace std;
@@ -109,7 +114,8 @@ namespace Engine{
 
 int main() {
 
-	//--------------------------------PART A----------------------------------------------------
+	//************** PART A **************
+	
 	Entity player, enemy, item;
 	player.setName("Aragorn").setHealth(100).setLevel(10).setType("Player");
 	enemy.setName("Orc").setHealth(60).setLevel(5).setType("Enemy");
@@ -131,7 +137,8 @@ int main() {
 	enemy.displayInfo();
 	item.displayInfo();
 
-	//--------------------------------PART B-------------------------------------------------------------------------------
+	//************** PART B ***************
+	
 	cout<<"Physics Clamp: ";
 	cout<<Physics::clamp(30, 50, 100);
 	cout<<endl;
@@ -156,7 +163,7 @@ int main() {
 		cout<<clamp(8000, 20, 590);
 	}
 	cout<<endl;
-	//---------------------PART C--------------------------------------------------------------------------------------------
+	//PART C
 	int R, C;
 	R = 3;
 	C = 4;
@@ -188,7 +195,7 @@ int main() {
 	cout<<"Forest : "<<cnt4<<endl;
 	cout<<"Dungeon : "<<cnt5<<endl;
 
-	//---------------------------BONUS QUESTION--------------------------------------------------
+	//BONUS QUESTION-
 	int level = 10; //local on line 106 we have global
 	cout<<"Printing global value: "<<::level<<endl;
 	cout<<"Printing local value: "<<level<<endl;

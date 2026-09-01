@@ -1,4 +1,9 @@
-
+/*
+ * Q2.cpp
+ *
+ *  Created on: 01-Sept-2026
+ *      Author: Ritesh
+ */
 
 #include <iostream>
 using namespace std;
@@ -66,13 +71,11 @@ public:
 
 		cout<<"Ward Transfer: "<<this->name<<" -> "<<newWard<<endl;
 	}
-
-
 };
 
 
 int main() {
-	//------------STACK OBJECTS------------------
+	//STACK OBJECTS
 	Patient p1("O+");
 	Patient p2(0, "Raj Patel");
 	Patient p3(1001, "Meera Joshi", 34, "Cardiology", "B+");
@@ -80,7 +83,7 @@ int main() {
 	cout<<endl;
 	cout<<endl;
 
-	//------------HEAP OBJECTS------------------
+	//HEAP OBJECTS
 	int sz = 4;
 	Patient* ptr = new Patient[sz];
 	for(int i = 0; i < 4; i++){

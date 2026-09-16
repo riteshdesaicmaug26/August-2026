@@ -1,41 +1,48 @@
 
-public class Employee1 {
-String name;
-int year_of_joining;
-String address;
+public class Employee {
 
-     public static void main(String[] args) 
-     {
-
-    	 Employee1 obj1 = new Employee1();
-    	 Employee1 obj2 = new Employee1();
-    	 Employee1 obj3 = new Employee1();
-			
-
-			obj1.name = "Robert";
-			obj1.year_of_joining = 1994;
-			obj1.address = "64C- WallsStreat";
-			
-			
-			obj2.name = "Sam";
-			obj2.year_of_joining = 2000;
-			obj2.address = "68D- WallsStreat";
-			
-			
-			obj3.name = "John";
-			obj3.year_of_joining = 1999;
-			obj3.address = "26B- WallsStreat";
-     
-     
-     
-			System.out.printf(" %-10s %-21s %-20s%n", "Name", "Year of joining ", "Address");
-			System.out.printf(" %-15s %-15s %-20s%n", obj1.name, obj1.year_of_joining, obj1.address);
-			System.out.printf(" %-15s %-15s %-20s%n", obj2.name, obj2.year_of_joining, obj2.address);
-			System.out.printf(" %-15s %-15s %-20s%n", obj3.name, obj3.year_of_joining, obj3.address);
-			
-     }
-
+	public int getInfo(int salary, int hoursOfWork){	
+		int finalSalary = salary + addSal(salary) + addWork(hoursOfWork);
+		
+		return finalSalary;
+	}
 	
+	public int addSal(int salary) {
+		int bonus;
+		if(salary < 500) {
+			bonus = 10;
+		}
+		else {
+			bonus = 0;
+		}
+		return bonus;
+	}
+	
+	public int addWork(int hoursOfWork) {
+		int incentive;
+		
+		if(hoursOfWork > 6) {
+			 incentive =  5;
+		}
+		else {
+			 incentive =  0;
+		}
+		
+		return incentive;
+	}
+	
+	public static void main(String[] args) {
+		
+		Employee obj = new Employee();
+		
+		System.out.println("Enter salary: ");
+		int salary = ConsoleInput.getInt();
+		System.out.println("Enter number of hours of work per day: ");
+		int hoursOfWork = ConsoleInput.getInt();
+		
+		
+		System.out.println("Final Salary: " + obj.getInfo(salary, hoursOfWork));
+
+	}
 
 }
-
